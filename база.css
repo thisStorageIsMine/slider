@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+}
+
+.wrapper {
+    width: min(100%,1200px);
+    background-color: #fff;
+
+}
+
+.slider {
+    
+    max-width: 100%;
+    overflow: hidden;
+    user-select: none;
+    /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+    touch-action: pan-y;
+}
+
+.slider-thumb {
+    display: flex;
+    will-change: transform;
+    width: 100%;
+}
+
+.slider.grab {
+    cursor: grab;
+}
+
+.slider.grabbing{
+    cursor: grabbing;
+}
+
+.block {
+    width: 300px;
+    height: 100px;
+    background-color: #000;
+    margin: 5px;
+    flex-shrink: 0;
+}
